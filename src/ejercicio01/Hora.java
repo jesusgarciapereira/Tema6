@@ -34,19 +34,22 @@ public class Hora {
 	 * Funcion que incrementa la hora en un minuto
 	 */
 	public void inc() {
-		// Si el minuto es 59
-		if (this.minuto == 59) {
+		// Incrementamos el número de minutos
+		this.minuto++;
+
+		// Si ahora el minuto es 60
+		if (this.minuto == 60) {
 			// Pasa a ser 0
 			this.minuto = 0;
-			// Y si, además, la hora es 23
-			if (this.hora == 23)
+			// Y la hora se incrementa
+			this.hora++;
+			
+			// Y si, ahora, la hora es 24
+			if (this.hora == 24) {
 				// Ésta también pasa a ser 0
 				this.hora = 0;
-
-			// Si el minuto no es 59
-		} else
-			// Se incrementa el minuto
-			this.minuto++;
+			}
+		}
 
 	}
 
