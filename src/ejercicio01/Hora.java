@@ -116,7 +116,7 @@ public class Hora {
 		// Si la hora es menor que 10
 		if (this.hora < 10)
 			// Se concatena un 0
-			cadena += 0;
+			cadena += "0";
 
 		// Concatenamos la hora con dos puntos
 		cadena += this.hora + ":";
@@ -124,7 +124,7 @@ public class Hora {
 		// Si el minuto es menor que 10
 		if (this.minuto < 10)
 			// Se concatena un 0
-			cadena += 0;
+			cadena += "0";
 
 		// Concatenamos el minuto
 		cadena += this.minuto;

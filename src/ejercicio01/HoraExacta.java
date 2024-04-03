@@ -9,7 +9,7 @@ public class HoraExacta extends Hora {
 	/**
 	 * Numero que representa los segundos
 	 */
-	protected int segundo;
+	private int segundo;
 
 	/**
 	 * Constructor con todos los parametros, incluidos los heredados
@@ -85,7 +85,7 @@ public class HoraExacta extends Hora {
 		// Si el segundo es menor que 10
 		if (this.segundo < 10)
 			// Se concatena un 0
-			cadena += 0;
+			cadena += "0";
 
 		// Concatenamos el segundo
 		cadena += this.segundo;
