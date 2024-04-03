@@ -22,7 +22,7 @@ public class Empleado {
 	 * @param nombre Nombre del empleado
 	 */
 	public Empleado(String nombre) {
-		// Para el nombre solo admitirá un String distinto de null y de cadena vacía
+		// Para el nombre sólo admitirá un String distinto de null y de cadena vacía
 		if (nombre != null && !nombre.equals(""))
 			this.nombre = nombre;
 	}
@@ -40,7 +40,7 @@ public class Empleado {
 	 * @param nombre Nombre del empleado
 	 */
 	public void setNombre(String nombre) {
-		// Para el nombre solo admitirá un String distinto de null y de cadena vacía
+		// Para el nombre sólo admitirá un String distinto de null y de cadena vacía
 		if (nombre != null && !nombre.equals(""))
 			this.nombre = nombre;
 	}
