@@ -76,4 +76,36 @@ public class Producto {
 			this.precio = precio;
 	}
 
+	/**
+	 * Metodo toString() sobreescrito
+	 */
+	@Override
+	public String toString() {
+		// Cadena que devolverá la función
+		String cadena = "------------------\n";
+
+		// Le concatenamos los valores de sus atributos
+		cadena += "Nombre: " + this.nombre + "\n";
+		cadena += "Precio: " + this.precio + "€";
+
+		// Devolverá la cadena que hemos creado
+		return cadena;
+	}
+
+	/**
+	 * Funcion para que calcula el precio total de un numero de productos
+	 * especificados en el parametro
+	 * 
+	 * @param cantProductos Cantidad de productos para hacer el calculo
+	 * @return Precio del producto por la cantidad de productos
+	 */
+	public double calcular(int cantProductos) {
+		// Resultado que devolverá la función, le asignamos el precio del producto por la cantidad de productos
+		double resultado = this.precio * cantProductos;
+
+		// Devolverá el resultado
+		return resultado;
+
+	}
+
 }
