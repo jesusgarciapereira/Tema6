@@ -15,6 +15,7 @@ public class Principal {
 		System.out.println(OP1);
 		System.out.println(OF1);
 		System.out.println(T1);
+		
 
 
 	}
