@@ -69,17 +69,4 @@ public class NoPerecedero extends Producto {
 		return cadena;
 	}
 
-	/**
-	 * Metodo calcular(), sin modificar
-	 */
-	@Override
-	public double calcular(int cantProductos) {
-		// Resultado que devolverá la función, le asignamos el valor recibido por el
-		// método calcular() del padre
-		double resultado = super.calcular(cantProductos);
-
-		// Devolverá el resultado
-		return resultado;
-	}
-
 }
