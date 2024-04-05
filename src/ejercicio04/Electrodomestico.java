@@ -123,29 +123,10 @@ public class Electrodomestico {
 	private void comprobarConsumoEnergetico(char letra) {
 		// Switch para cada caso del parámetro
 		switch (letra) {
-		// Si es 'A' o 'a', se asigna al consumo energético el valor A
-		case 'A', 'a':
-			this.consumoEnergetico = ConsumoEnergetico.A;
-			break;
-		// Si es 'B' o 'b', se asigna al consumo energético el valor B
-		case 'B', 'b':
-			this.consumoEnergetico = ConsumoEnergetico.B;
-			break;
-		// Si es 'C' o 'c', se asigna al consumo energético el valor C
-		case 'C', 'c':
-			this.consumoEnergetico = ConsumoEnergetico.C;
-			break;
-		// Si es 'D' o 'd', se asigna al consumo energético el valor D
-		case 'D', 'd':
-			this.consumoEnergetico = ConsumoEnergetico.D;
-			break;
-		// Si es 'E' o 'e', se asigna al consumo energético el valor E
-		case 'E', 'e':
-			this.consumoEnergetico = ConsumoEnergetico.E;
-			break;
-		// Si es 'F' o 'f', se asigna al consumo energético el valor F
-		case 'F', 'f':
-			this.consumoEnergetico = ConsumoEnergetico.F;
+		// Si es uno de estos casos
+		case 'A', 'B', 'C', 'D', 'E', 'F':
+			// Se asigna el char elegido, convertido a String y luego a ConsumoEnergetico con el valueOf
+			this.consumoEnergetico = ConsumoEnergetico.valueOf(String.valueOf(letra).toUpperCase());
 			break;
 		// En cualquier otro caso, se asigna al consumo energético el valor por defecto
 		// (F)
@@ -162,25 +143,10 @@ public class Electrodomestico {
 	private void comprobarColor(String color) {
 		// Switch para cada caso del parámetro
 		switch (color.toUpperCase()) {
-		// Si es "BLANCO", se asigna al color el valor BLANCO
-		case "BLANCO":
-			this.color = Color.BLANCO;
-			break;
-		// Si es "NEGRO", se asigna al color el valor NEGRO
-		case "NEGRO":
-			this.color = Color.NEGRO;
-			break;
-		// Si es "ROJO", se asigna al color el valor ROJO
-		case "ROJO":
-			this.color = Color.ROJO;
-			break;
-		// Si es "AZUL", se asigna al color el valor AZUL
-		case "AZUL":
-			this.color = Color.AZUL;
-			break;
-		// Si es "GRIS", se asigna al color el valor GRIS
-		case "GRIS":
-			this.color = Color.GRIS;
+		// Si es uno de estos casos
+		case "BLANCO", "NEGRO", "ROJO", "AZUL", "GRIS":
+			// Se asigna el char elegido, convertido  a ConsumoEnergetico con el valueOf
+			this.color = Color.valueOf(color);
 			break;
 		// En cualquier otro caso, se asigna al color el valor por defecto (BLANCO)
 		default:
