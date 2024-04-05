@@ -85,7 +85,7 @@ public class Electrodomestico {
 	 * @return Precio base del electrodomestico
 	 */
 	public double getPrecioBase() {
-		return precioBase;
+		return this.precioBase;
 	}
 
 	/**
@@ -94,7 +94,7 @@ public class Electrodomestico {
 	 * @return Color del electrodomestico
 	 */
 	public String getColor() {
-		return String.valueOf(color);
+		return String.valueOf(this.color);
 	}
 
 	/**
@@ -102,8 +102,8 @@ public class Electrodomestico {
 	 * 
 	 * @return Consumo energetico del electrodomestico
 	 */
-	public String getConsumoEnergetico() {
-		return String.valueOf(consumoEnergetico);
+	public char getConsumoEnergetico() {
+		return String.valueOf(this.consumoEnergetico).charAt(0);
 	}
 
 	/**
@@ -112,7 +112,7 @@ public class Electrodomestico {
 	 * @return Peso del electrodomestico
 	 */
 	public double getPeso() {
-		return peso;
+		return this.peso;
 	}
 
 	/**
@@ -146,7 +146,7 @@ public class Electrodomestico {
 		// Si es uno de estos casos
 		case "BLANCO", "NEGRO", "ROJO", "AZUL", "GRIS":
 			// Se asigna el char elegido, convertido  a ConsumoEnergetico con el valueOf
-			this.color = Color.valueOf(color);
+			this.color = Color.valueOf(color.toUpperCase());
 			break;
 		// En cualquier otro caso, se asigna al color el valor por defecto (BLANCO)
 		default:
