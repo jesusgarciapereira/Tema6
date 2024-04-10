@@ -30,7 +30,24 @@ public abstract class Poligono {
 		return numeroLados;
 	}
 
-	
-	
+	/**
+	 * Metrodo para calcular el area del poligono, en la clase Poligono es abstracto
+	 * porque no podemos calcularlo si no sabemos que tipo de poligono es
+	 */
+	public abstract double area();
+
+	/**
+	 * Metodo toString sobreescrito
+	 */
+	@Override
+	public String toString() {
+		// Cadena que devolverá la función
+		String cadena = "------------------\n";
+		// Le concatenamos los datos que mostrará
+		cadena += "Número de lados: " + this.numeroLados + "\n";
+		
+		// Devolverá la cadena de texto que hemos construido
+		return cadena;
+	}
 
 }
