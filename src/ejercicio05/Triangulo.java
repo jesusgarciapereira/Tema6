@@ -131,8 +131,8 @@ public class Triangulo extends Poligono {
 		// Le concatenamos los datos que mostrará
 		cadena += "Tipo: Triángulo\n";
 		cadena += "Lado1: " + lado1 + "\n";
-		cadena += "Lado1: " + lado2 + "\n";
-		cadena += "Lado1: " + lado3 + "\n";
+		cadena += "Lado2: " + lado2 + "\n";
+		cadena += "Lado3: " + lado3 + "\n";
 
 		// Devolverá la cadena de texto que hemos construido
 		return cadena;
