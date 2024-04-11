@@ -100,8 +100,8 @@ public class Rectangulo extends Poligono {
 		String cadena = "------------------\n";
 		// Le concatenamos los datos que mostrará
 		cadena += "Tipo: Rectángulo\n";
-		cadena += "Lado largo: " + lado1 + "\n";
-		cadena += "Lado ancho: " + lado2 + "\n";
+		cadena += "Lado largo: " + this.lado1 + "\n";
+		cadena += "Lado ancho: " + this.lado2;
 
 		// Devolverá la cadena de texto que hemos construido
 		return cadena;

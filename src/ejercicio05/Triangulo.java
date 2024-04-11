@@ -130,9 +130,9 @@ public class Triangulo extends Poligono {
 		String cadena = "------------------\n";
 		// Le concatenamos los datos que mostrará
 		cadena += "Tipo: Triángulo\n";
-		cadena += "Lado1: " + lado1 + "\n";
-		cadena += "Lado2: " + lado2 + "\n";
-		cadena += "Lado3: " + lado3 + "\n";
+		cadena += "Lado1: " + this.lado1 + "\n";
+		cadena += "Lado2: " + this.lado2 + "\n";
+		cadena += "Lado3: " + this.lado3;
 
 		// Devolverá la cadena de texto que hemos construido
 		return cadena;
