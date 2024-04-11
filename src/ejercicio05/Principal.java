@@ -34,14 +34,14 @@ public class Principal {
 			case 1:
 				// Llama a la función introduceTriangulo() y muestra el correspondiente mensaje
 				System.out.println(ArrayPoligono.introduceTriangulo() ? "Triángulo introducido correctamente"
-						: "El array de polígonos está lleno");
+						: "No ha sido posible la introducción del triángulo");
 				System.out.println();
 				break;
 				// Si es 2
 			case 2:
 				// Llama a la función introduceRectangulo() y muestra el correspondiente mensaje
 				System.out.println(ArrayPoligono.introduceRectangulo() ? "Rectángulo introducido correctamente"
-						: "El array de polígonos está lleno");
+						: "No ha sido posible la introducción del rectángulo");
 				System.out.println();
 				break;
 				// Si es 3

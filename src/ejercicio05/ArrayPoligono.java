@@ -40,11 +40,13 @@ public class ArrayPoligono {
 			// Creamos un obgeto de tipo Triangulo con los valores introducidos
 			Triangulo triangulo = new Triangulo(3, lado1, lado2, lado3);
 
-			// Asignamos el objeto al array en una posición que esté libre
-			poligonos[posicionLibre()] = triangulo;
-
-			// Y asignamos el boolean como true
-			hecho = true;
+			// Si el área del triángulo es mayor que 0
+			if (triangulo.area() > 0) {
+				// Asignamos el objeto al array en una posición que esté libre
+				poligonos[posicionLibre()] = triangulo;
+				// Y asignamos el boolean como true
+				hecho = true;
+			}
 		}
 
 		// Devolverá el valor de nuestro boolean
@@ -76,11 +78,13 @@ public class ArrayPoligono {
 			// Creamos un obgeto de tipo Rectangulo con los valores introducidos
 			Rectangulo rectangulo = new Rectangulo(4, lado1, lado2);
 
-			// Asignamos el objeto al array en una posición que esté libre
-			poligonos[posicionLibre()] = rectangulo;
-
-			// Y asignamos el boolean como true
-			hecho = true;
+			// Si el área del rectángulo es mayor que 0
+			if (rectangulo.area() > 0) {
+				// Asignamos el objeto al array en una posición que esté libre
+				poligonos[posicionLibre()] = rectangulo;
+				// Y asignamos el boolean como true
+				hecho = true;
+			}
 		}
 
 		// Devolverá el valor de nuestro boolean
@@ -100,16 +104,10 @@ public class ArrayPoligono {
 				System.out.println(poligono.toString());
 				// Y su área
 				System.out.println("Área: " + poligono.area() + "\n");
-				
-				// Si el área del polígono es 0 
-				if(poligono.area() == 0) {
-					// Muestra este mensaje
-					System.out.println("En este caso, los valores introducidos describen un polígono imposible\n");
-				}
+
 			}
-			
-			
 		}
+
 	}
 
 	/**
@@ -135,7 +133,7 @@ public class ArrayPoligono {
 			contador++;
 
 		}
-		
+
 		// Devuelve el valor asignado a la posición
 		return posicion;
 
