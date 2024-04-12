@@ -1,7 +1,7 @@
 package interfaces.ejercicio01;
 
 /**
- * clase que representa y contiene los atributos y metodos de cada socio
+ * Clase que representa y contiene los atributos y metodos de cada socio
  */
 public class Socio implements Comparable<Socio> {
 
@@ -21,7 +21,7 @@ public class Socio implements Comparable<Socio> {
 	private int edad;
 
 	/**
-	 * Constructor con todos los parametros
+	 * Constructor con todos los atributos como parametro
 	 * 
 	 * @param id     Numero identificativo del socio
 	 * @param nombre Nombre del socio
@@ -37,24 +37,6 @@ public class Socio implements Comparable<Socio> {
 		// La edad sólo admitirá valores mayores que 0
 		if (edad > 0)
 			this.edad = edad;
-	}
-
-	/**
-	 * Metodo toString() sobreescrito
-	 */
-	@Override
-	public String toString() {
-		// Cadena que devolverá la función
-		String cadena = "---------------------\n";
-
-		// Le concatenamos los datos que queremos mostrar
-		cadena += "ID: " + this.id + "\n";
-		cadena += "Nombre: " + this.nombre + "\n";
-		cadena += "Edad: " + this.edad + "\n";
-
-		// Devolverá la cadena que hemos construido
-		return cadena;
-
 	}
 
 	/**
@@ -80,4 +62,21 @@ public class Socio implements Comparable<Socio> {
 		return resultado;
 	}
 
+	/**
+	 * Metodo toString() sobreescrito
+	 */
+	@Override
+	public String toString() {
+		// Cadena que devolverá la función
+		String cadena = "---------------------\n";
+
+		// Le concatenamos los datos que queremos mostrar
+		cadena += "ID: " + this.id + "\n";
+		cadena += "Nombre: " + this.nombre + "\n";
+		cadena += "Edad: " + this.edad + "\n";
+
+		// Devolverá la cadena que hemos construido
+		return cadena;
+
+	}
 }
