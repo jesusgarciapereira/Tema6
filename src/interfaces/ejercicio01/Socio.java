@@ -54,7 +54,7 @@ public class Socio implements Comparable<Socio> {
 			resultado = -1;
 		// Si el id del objeto en el que estamos es mayor que el del objeto del
 		// parámetro
-		if (this.id > o.id)
+		else if (this.id > o.id)
 			// Asignamos 1 al resultado
 			resultado = 1;
 
