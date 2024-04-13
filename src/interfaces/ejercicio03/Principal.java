@@ -18,8 +18,8 @@ public class Principal {
 		p1.vacunar();
 		g1.vacunar();
 		
-		System.out.println(p1.nombre + " " + (p1.hacerCaso() ? "te ha hecho caso" : "no te ha hecho caso"));
-		System.out.println(g1.nombre + " " + (g1.hacerCaso() ? "te ha hecho caso" : "no te ha hecho caso"));
+		System.out.println(p1.nombre + " " + (p1.hacerCaso() ? "" : "no ") + "te ha hecho caso");
+		System.out.println(g1.nombre + " " + (g1.hacerCaso() ? "" : "no ") + "te ha hecho caso");
 		
 		p1.sacarPaseo();
 		g1.toserBolaPelo();
