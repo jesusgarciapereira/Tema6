@@ -45,8 +45,8 @@ public class Gato extends AnimalDomestico {
 		// Declaramos la variable numero y le asignamos un valor aleatorio entre 1 y 100
 		int numero = aleatorio.nextInt(1, 101);
 
-		// Si el número está entre 1 y 5
-		if (numero >= 1 && numero <= 5)
+		// Si es menor o igual que 5
+		if (numero <= 5)
 			// Asignamos resultado como true
 			resultado = true;
 

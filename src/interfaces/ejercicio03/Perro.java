@@ -46,8 +46,8 @@ public class Perro extends AnimalDomestico {
 		// Declaramos la variable numero y le asignamos un valor aleatorio entre 1 y 100
 		int numero = aleatorio.nextInt(1, 101);
 		
-		// Si el número está entre 1 y 90
-		if (numero >= 1 && numero <= 90)
+		// Si el número es menor o igual que 90
+		if (numero <= 90)
 			// Asignamos resultado como true
 			resultado = true;
 
