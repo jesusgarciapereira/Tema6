@@ -6,21 +6,19 @@ package interfaces.ejercicio03;
 public interface Animal {
 
 	/**
-	 * Metodo abstracto comer(), por defecto enseña ese texto
+	 * Metodo abstracto comer()
 	 */
-	default void comer() {
-		System.out.println("Ñam");
-	};
+	public void comer();
 	
 	/**
-	 * Metodo abstracto dormir(), por defecto enseña ese texto
+	 * Metodo abstracto dormir()
 	 */
-	default void dormir() {
-		System.out.println("Zzz");
-	};
+	public void dormir();
 	
 	/**
 	 * Metodo abstracto hacerRuido()
 	 */
 	public void hacerRuido();
 }
+
+ 

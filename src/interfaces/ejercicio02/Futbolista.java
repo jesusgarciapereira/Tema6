@@ -30,8 +30,9 @@ public class Futbolista implements Comparable<Futbolista> {
 	 * @param numGoles    Numero de goles del futbolista
 	 */
 	public Futbolista(int numCamiseta, String nombre, int edad, int numGoles) {
-		// El número de camiseta sólo admitirá valores mayores que 0
-		if (numCamiseta > 0)
+		// El número de camiseta sólo admitirá valores mayores que 0 y menores o igual
+		// que 99
+		if (numCamiseta > 0 && numCamiseta <= 99)
 			this.numCamiseta = numCamiseta;
 		// El nombre sólo admitirá valores distintos de null y de cadena vacía
 		if (nombre != null && !nombre.equals(""))
@@ -62,24 +63,48 @@ public class Futbolista implements Comparable<Futbolista> {
 		else if (this.numCamiseta > o.numCamiseta)
 			// Asignamos 1 al resultado
 			resultado = 1;
-
-		// Si el resultado sigue siendo 0 (los números de camisetas de ambos objetos son
-		// iguales), haremos las comparaciones con los nombres
-		if (resultado == 0) {
-			// Si el nombre del objeto en el que estamos es alfabéticamente menor que el del
-			// objeto del parámetro
-			if (this.nombre.compareTo(o.nombre) < 0)
-				// Asignamos -1 al resultado
-				resultado = -1;
-			// Si el nombre del objeto en el que estamos es alfabéticamente mayor que el del
-			// objeto del parámetro
-			else if (this.nombre.compareTo(o.nombre) > 0)
-				// Asignamos 1 al resultado
-				resultado = 1;
-
+		// Si son iguales
+		else {
+			// El resultado sera el compareTo() de los nombres
+			resultado = this.nombre.compareTo(o.nombre);
 		}
 
+//		// Si el resultado sigue siendo 0 (los números de camisetas de ambos objetos son
+//		// iguales), haremos las comparaciones con los nombres
+//		if (resultado == 0) {
+//			// Si el nombre del objeto en el que estamos es alfabéticamente menor que el del
+//			// objeto del parámetro
+//			if (this.nombre.compareTo(o.nombre) < 0)
+//				// Asignamos -1 al resultado
+//				resultado = -1;
+//			// Si el nombre del objeto en el que estamos es alfabéticamente mayor que el del
+//			// objeto del parámetro
+//			else if (this.nombre.compareTo(o.nombre) > 0)
+//				// Asignamos 1 al resultado
+//				resultado = 1;
+//
+//		}
+
 		// Devolvemos el valor asignado al resultado
+		return resultado;
+	}
+
+	/**
+	 * Metodo equals() sobreescrito
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		// Resultado que devolverá la función, inicializado como false
+		boolean resultado = false;
+		// Casteamos el objeto del parámetro al mismo tipo que nuestra clase
+		Futbolista futbolista = (Futbolista) obj;
+		
+		// si ambos objetos tienen el mismo número de camiseta y el mismo nombre
+		if (this.numCamiseta == futbolista.numCamiseta && this.nombre.equals(futbolista.nombre))
+			// Asignamos el resultado como true
+			resultado = true;
+		
+		// La función devolverá el valor del resultado
 		return resultado;
 	}
 

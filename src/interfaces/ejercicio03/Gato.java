@@ -26,7 +26,7 @@ public class Gato extends AnimalDomestico {
 	@Override
 	public void hacerRuido() {
 		// Mostrará un maullido
-		System.out.println("Miau");
+		System.out.println("Escuchemos como " + this.nombre + " maulla: ¡Miau!");
 
 	}
 

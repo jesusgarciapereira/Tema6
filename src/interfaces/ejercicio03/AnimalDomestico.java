@@ -22,7 +22,6 @@ public abstract class AnimalDomestico implements Animal {
 	 */
 	private String color = "";
 
-	
 	/**
 	 * Constructor con todos los parametros
 	 * 
@@ -44,6 +43,28 @@ public abstract class AnimalDomestico implements Animal {
 		// El color sólo admitirá valores distintos de null y de cadena vacía
 		if (color != null && !color.equals(""))
 			this.color = color;
+	}
+
+	/**
+	 * Metodo comer() sobreescrito
+	 */
+	@Override
+	public void comer() {
+		// Todos los animales domésticos mostrarán este texto al llamar a la función
+		// comer()
+		System.out.println("Escuchemos como " + this.nombre + " come: Ñam");
+ 
+	}
+
+	/**
+	 * Metodo dormir() sobreescrito
+	 */
+	@Override
+	public void dormir() {
+		// Todos los animales domésticos mostrarán este texto al llamar a la función
+		// dormir()
+		System.out.println("Escuchemos como " + this.nombre + " duerme: Zzz");
+
 	}
 
 	/**

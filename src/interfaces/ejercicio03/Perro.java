@@ -27,7 +27,7 @@ public class Perro extends AnimalDomestico {
 	@Override
 	public void hacerRuido() {
 		// Mostrará un ladrido
-		System.out.println("Guau");
+		System.out.println("Escuchemos como " + this.nombre + " ladra: ¡Guau!");
 
 	}
 
