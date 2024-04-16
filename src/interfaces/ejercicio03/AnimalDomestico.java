@@ -66,6 +66,12 @@ public abstract class AnimalDomestico implements Animal {
 		System.out.println("Escuchemos como " + this.nombre + " duerme: Zzz");
 
 	}
+	
+	/**
+	 * hacerRuido() sigue siendo abstracto aqui
+	 */
+	@Override
+	public abstract void hacerRuido();
 
 	/**
 	 * Metodo que vacuna al animal y muestra el mensaje
