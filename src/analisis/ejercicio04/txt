@@ -1,0 +1,29 @@
+Contacto ¿abstract?
+		- nombre: String
+		- telefono: int or long
+		-----------------------------
+		+ Contacto(String nombre, int telefono)
+		-----------------------------
+		+ getNombre()
+		+ getTelefono()
+		+ setNombre(String nombre)
+		+ setTelefono(int telefono)
+		
+		Heredados:
+		+ equals()
+
+Persona extends Contacto
+		- cumpleannios: String
+		----------------------------
+		+ Persona(String nombre, int telefono, String cumpleannios)
+		----------------------------
+		+ getCumpleannios()
+
+Empresa extends Contacto
+		- paginaWeb: String
+		----------------------------
+		+ Empresa(String nombre, int telefono, String paginaWeb)
+		----------------------------
+		+ getPaginaWeb()
+		+ setPaginaWeb(String paginaWeb)
+	

@@ -1,0 +1,27 @@
+CuentaBancaria ¿abstract?
+		- num: int
+		- saldo: double
+		- titulares: Titular[3]
+		---------------------
+		+ CuentaBancaria(int num, double saldo, Titular[] titulares)
+		---------------------
+		+ ingresar()
+		+ retirar()
+		+ anniadirTitular()
+		+ borrarTitular()
+
+CuentaAhorro extends CuentaBancaria
+		- cuotaMantenimiento: double
+		- interesAnual: double
+		----------------------------
+		+ CuentaBancaria(int num, double saldo, Titular[] titulares, double cuotaMantenimiento, double interesAnual)
+		---------------------
+
+CuentaCorriente extends CuentaBancaria
+	
+	
+Titular
+		- dni: String
+		- nombre: String
+		- apellidos: String
+		- telefono: int or long
