@@ -9,6 +9,12 @@ CuentaBancaria ¿abstract?
 		+ retirar()
 		+ anniadirTitular()
 		+ borrarTitular()
+			
+Titular
+		- dni: String
+		- nombre: String
+		- apellidos: String
+		- telefono: int or long
 
 CuentaAhorro extends CuentaBancaria
 		- cuotaMantenimiento: double
@@ -18,10 +24,21 @@ CuentaAhorro extends CuentaBancaria
 		---------------------
 
 CuentaCorriente extends CuentaBancaria
-	
-	
-Titular
-		- dni: String
-		- nombre: String
-		- apellidos: String
-		- telefono: int or long
+		- porcentajePorTransaccion: double
+		- numTrasacciones: int
+		- transacciones: Transaccion[]
+		---------------------
+		+ CuentaCorriente(int num, double saldo, Titular[] titulares, double porcentajePorTransaccion, int numTrasacciones, Transaccion[] transacciones)
+		---------------------
+
+Transaccion 
+		- dia: int
+		- mes: int
+		- annio: int
+		- concepto: String
+		- importe: double
+		---------------------
+		+ Transaccion(int dia, int mes, inte annio, String concepto, double importe)
+		---------------------
+
+¿Cuáles getter y setter?
