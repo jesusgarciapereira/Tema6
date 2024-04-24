@@ -1,0 +1,58 @@
+Ficha abstract
+	- id: int
+	- titulo: String
+	-------------------------
+	+ Ficha (int id, String titulo)
+	-------------------------
+	+ getId(): int
+	+ getTitulo(): String
+	+ setId(int id) 		// no debería poderse cambiar porque es único
+	+ setTitulo(String titulo) 	// ¿cambiar un título?
+	-------------------------
+	+ abstract prestamo(): int
+
+Libro extends Ficha
+	- autor: String
+	- editorial: String
+	-------------------------
+	+ Libro (int id, String titulo, String autor, String editorial)
+	-------------------------
+	+ getAutor(): String
+	+ getEditorial(): String
+	+ setAutor(String autor) 	// ¿cambiar un autor?
+	+ setEditorial(String editorial)
+	-------------------------
+	Heredados:
+		+ prestamo(): int
+
+Revista extends Ficha
+	- num: int
+	- annio: int
+	-------------------------
+	+ Libro (int id, String titulo, int num, int annio)
+	-------------------------
+	+ getNum(): int
+	+ getAnnio(): int
+	+ setNum(int num) 	// No tiene sentido cambiar el número
+	+ setAnnio(int annio) 	// No tiene sentido cambiar el año
+	-------------------------
+	Heredados:
+		+ prestamo(): int
+
+Dvd extends Ficha
+	Enum Tipo {PELICULA, DOCUMENTAL, SERIE}
+	- director: String
+	- annio: int
+	- tipo: Tipo
+	-------------------------
+	+ Libro (int id, String titulo, String director, int annio, Tipo tipo)
+	-------------------------
+	+ getDirector(): String
+	+ getAnnio(): int
+	+ getTipo(): Tipo
+	+ setDirector(String director)
+	+ setAnnio(int annio)
+	+ setTipo(Tipo tipo)
+	-------------------------
+	Heredados:
+		+ prestamo(): int

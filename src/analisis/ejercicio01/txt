@@ -1,0 +1,35 @@
+Vehiculo
+	- marca: String
+	- modelo: String
+	- color: String
+	- matricula: String
+	? motorEncendido: boolean (false)
+	? marchaActual: int (0 - pto muerto)
+	? velocidadActual: double (0.0)
+	---------------------------
+	+ Vehiculo(marca, modelo, color, matricula)
+	---------------------------
+	+ setMarcha (int marcha)
+	+ setMotor (boolean motor)
+	---------------------------
+	+ parar(): void
+	+ arrancar(): void
+	+ acelerar(double velocidad)
+		- subirMarcha(): void
+	+ frenar()
+		- bajarMarcha(): void
+	+ mantenerVelocidad(i)
+
+Turismo extends Vehiculo
+	enum Tipo {PROFESIONAL, PARTICULAR}
+	- numPlazas: int
+	- tipoUso: Tipo
+
+Camion extends Vehiculo
+	- pesoMaximoAutorizado: double
+	- mercanciaPeligrosa: boolean
+
+Motocicleta extends Vehiculo
+	- cilindrada: int
+	---------------------
+	+ requiereCarnet(): boolean
