@@ -1,44 +1,48 @@
 CuentaBancaria ¿abstract?
-		- num: int
+		- num: String
 		- saldo: double
 		- titulares: Titular[3]
 		---------------------
-		+ CuentaBancaria(int num, double saldo, Titular[] titulares)
+		+ CuentaBancaria(int num, double saldo, Titular titular)
 		---------------------
-		+ ingresar()
-		+ retirar()
-		+ anniadirTitular()
-		+ borrarTitular()
+		+ ingresar(double cantidad): boolean
+		+ retirar(double cantidad): boolean
+		+ anniadirTitular(Titular t): boolean
+		+ borrarTitular(Titular t): boolean
 			
 Titular
 		- dni: String
 		- nombre: String
 		- apellidos: String
-		- telefono: int or long
+		- telefono: String
+		---------------------
+		+ equals(Object o): boolean (@Override)
 
 CuentaAhorro extends CuentaBancaria
 		- cuotaMantenimiento: double
 		- interesAnual: double
 		----------------------------
-		+ CuentaBancaria(int num, double saldo, Titular[] titulares, double cuotaMantenimiento, double interesAnual)
+		+ CuentaAhorro(int num, double saldo, Titular titular, double cuotaMantenimiento, double interesAnual)
 		---------------------
+		+ aplicaInteres()
+		+ aplicaMantenimiento()
 
 CuentaCorriente extends CuentaBancaria
-		- porcentajePorTransaccion: double
-		- numTrasacciones: int
-		- transacciones: Transaccion[]
+		- transacciones: List<Transaccion>
 		---------------------
-		+ CuentaCorriente(int num, double saldo, Titular[] titulares, double porcentajePorTransaccion, int numTrasacciones, Transaccion[] transacciones)
+		+ CuentaCorriente(int num, double saldo, Titular titular)
 		---------------------
 
 Transaccion 
+		enum TipoMovimiento {BIZUM, RECIBOS, TRANSFERENCIAS, IMPUESTOS}
+		- porcentaje: double
 		- dia: int
 		- mes: int
 		- annio: int
 		- concepto: String
 		- importe: double
 		---------------------
-		+ Transaccion(int dia, int mes, inte annio, String concepto, double importe)
+		+ Transaccion(double porcentaje, int dia, int mes, inte annio, String concepto, double importe)
 		---------------------
 
 ¿Cuáles getter y setter?
