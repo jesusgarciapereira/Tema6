@@ -1,4 +1,4 @@
-CuentaBancaria ¿abstract?
+CuentaBancaria 
 		- num: String
 		- saldo: double
 		- titulares: Titular[3]
