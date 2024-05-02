@@ -19,30 +19,32 @@ public class Principal {
 
 		gato = r.nextInt(100) + 1;
 
-		Turismo c = new Turismo("Renault", "Megane", "Rojo", "1234-ABC", false, 0, 0, 4, "Particular");
+		Turismo t1 = new Turismo("Renault", "Megane", "Rojo", "1234-ABC", false, 0, 0, 4, "Particular");
 
-		c.arrancar();
+		t1.arrancar();
 
 		System.out.println("¿A qué velocidad desea ir?");
 
 		velocidadPedida = sc.nextDouble();
 
-		c.acelerar(velocidadPedida);
+		t1.acelerar(velocidadPedida);
 
 		System.out.println("¿Cuánto tiempo desea ir a esta velocidad");
 		tiempoPedido = sc.nextInt();
 
 		if (gato <= 10) {
 			System.out.println("Se nos ha cruzado un gato");
-			c.parar();
+			t1.parar();
 			
 		} else {
-			c.mantenerVelocidad(tiempoPedido);
+			t1.mantenerVelocidad(tiempoPedido);
 			
-			c.frenar();
+			t1.frenar();
 
-			c.parar();
+			t1.parar();
 		}
+		
+		sc.close();
 	}
 
 }

@@ -20,7 +20,7 @@ public class Turismo extends Vehiculo {
 	/**
 	 * Tipo de Turismo
 	 */
-	private Tipo tipoUso;
+	public Tipo tipoUso;
 
 	/**
 	 * Constructor con todos los atributos como parametro
@@ -39,15 +39,35 @@ public class Turismo extends Vehiculo {
 			int marchaActual, double velocidadActual, int numPlazas, String tipoUso) {
 		// Llama al constructor del padre
 		super(marca, modelo, color, matricula, motorEncendido, marchaActual, velocidadActual);
-		
+
 		// El número de plazas sólo admitirá valores mayores que 0
 		if (numPlazas > 0)
 			this.numPlazas = numPlazas;
 
-		// El Tipo que se use debe ser distinto de null y de cadena vacía, además de ser alguno de los valores posibles del Enum
-		if (tipoUso != null && !tipoUso.equals("")
-				&& (tipoUso.equalsIgnoreCase("PROFESIONAL") || tipoUso.equalsIgnoreCase("PARTICULAR")))
-			this.tipoUso = Tipo.valueOf(tipoUso.toUpperCase());
+		// Llama a la función comprobarTipo para asignar el valor correspondiente al
+		// tipo de uso
+		comprobarTipo(tipoUso);
+
+	}
+
+	/**
+	 * Funcion para comprobar que el tipoUso del parametro es correcto
+	 * 
+	 * @param texto String que queremos asignar como valor del tipoUso
+	 */
+	private void comprobarTipo(String texto) {
+
+		// Switch para cada caso del parámetro (en mayúsculas)
+		switch (texto.toUpperCase()) {
+		// Si es uno de estos casos
+		case "PROFESIONAL", "PARTICULAR":
+			// Se asigna el String al Tipo con el valueOf
+			this.tipoUso = Tipo.valueOf(texto.toUpperCase());
+			break;
+		// En cualquier otro caso, no se asigna nada
+		default:
+			break;
+		}
 	}
 
 }
