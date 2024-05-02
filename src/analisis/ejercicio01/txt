@@ -14,11 +14,12 @@ Vehiculo
 	---------------------------
 	+ parar(): void
 	+ arrancar(): void
-	+ acelerar(double velocidad)
-		- subirMarcha(): void
+	+ acelerar(double velocidad): void
+		- cambiarMarcha(): void
 	+ frenar()
-		- bajarMarcha(): void
+		- cambiarMarcha(): void
 	+ mantenerVelocidad(i)
+	- cambiarMarcha(): void
 
 Turismo extends Vehiculo
 	enum Tipo {PROFESIONAL, PARTICULAR}
