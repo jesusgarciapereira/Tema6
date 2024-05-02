@@ -1,7 +1,7 @@
 package analisis.ejercicio01;
 
 /**
- * clase que representa a cada Vehiculo
+ * Clase que representa a cada Vehiculo
  */
 public class Vehiculo {
 
@@ -135,13 +135,11 @@ public class Vehiculo {
 	/**
 	 * Funcion que frena el Vehiculo
 	 * 
-	 * @param velocidad Velocidad indicada a la que se desea ir
 	 */
-	public void frenar(double velocidad) {
+	public void frenar() {
 
-		// Mientras la velocidad actual del coche sea mayor que la velocidad indicada en
-		// el parámetro
-		while (this.velocidadActual > velocidad) {
+		// Mientras la velocidad actual del coche sea mayor que 0
+		while (this.velocidadActual > 0) {
 			// Se decrementa la velocidad actual
 			this.velocidadActual--;
 			// Se llama a la función cambiarMarcha() en cada iteración del bucle

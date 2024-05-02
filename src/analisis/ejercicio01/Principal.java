@@ -1,0 +1,48 @@
+package analisis.ejercicio01;
+
+import java.util.Locale;
+import java.util.Random;
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+
+		double velocidadPedida;
+		int tiempoPedido;
+		int gato;
+
+		Scanner sc = new Scanner(System.in);
+		sc.useLocale(Locale.US);
+
+		Random r = new Random();
+
+		gato = r.nextInt(100) + 1;
+
+		Turismo c = new Turismo("Renault", "Megane", "Rojo", "1234-ABC", false, 0, 0, 4, "Particular");
+
+		c.arrancar();
+
+		System.out.println("¿A qué velocidad desea ir?");
+
+		velocidadPedida = sc.nextDouble();
+
+		c.acelerar(velocidadPedida);
+
+		System.out.println("¿Cuánto tiempo desea ir a esta velocidad");
+		tiempoPedido = sc.nextInt();
+
+		if (gato <= 10) {
+			System.out.println("Se nos ha cruzado un gato");
+			c.parar();
+			
+		} else {
+			c.mantenerVelocidad(tiempoPedido);
+			
+			c.frenar();
+
+			c.parar();
+		}
+	}
+
+}
